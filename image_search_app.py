@@ -11,11 +11,11 @@ qd_client = QdrantClient("localhost", port=6333)
 model = SentenceTransformer("clip-ViT-B-32")
 
 
-def search_dataset(text_query):
+def search_dataset(text_query: str):
     """
     Perform a semantic search based on the text query, in the ad dataset collection.
-    :param text_query:
-    :return:
+    :param text_query: string representing a textual query
+    :return: a list of result items as returned from qdrant_client.search
     """
     results = qd_client.search(
         collection_name="ad_dataset",
@@ -30,8 +30,6 @@ def search_dataset(text_query):
 def display_results(results):
     """
     Displays results of qdrant client search with streamlit.
-    :param results:
-    :return:
     """
 
     st.header('Results')
