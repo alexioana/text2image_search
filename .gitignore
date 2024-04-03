@@ -3,3 +3,4 @@ thoughts.md
 /qdrant_storage
 /venv
 *.ipynb
+__pycache__/
