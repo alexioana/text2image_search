@@ -1,7 +1,5 @@
 thoughts.md
 /ad_dataset
-/data
-/images
 /qdrant_storage
 /venv
 *.ipynb
