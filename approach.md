@@ -34,6 +34,11 @@ For a qualitative evaluation/test, I have prepared the following prompts which s
 Sometimes there are easy prompts it gets wrong too:
 * carrot
 * submarine
+* crocodile
+
+Sometimes the prompt tries finding something outside of the distribution of our dataset, and finds whatever is closest to the prompt semantically.
+For *submarine*, it returns pictures of the sea but no actual sub.
+For *carrot*, it finds pictures of a number of different vegetables.
 
 The image retrieval does a pretty good job when faced with prompts that are pretty explicit and simple, common things.
 However, when some degree of specificity is included, for instance:
@@ -54,9 +59,6 @@ There is also the issue of ambiguity, both in the text prompts and the images, s
 are pretty abstract and might show up on many different prompts as they lie in an interesting place in our embedding space.
 I have had this picture show up for the prompt "circuit". Which I meant as a computer circuit but the system understood it as a racing circuit.
 
-Sometimes the prompt tries finding something outside of the distribution of our dataset, and finds whatever is closest to the prompt semantically.
-For *submarine*, it returns pictures of the sea but no actual sub.
-For *carrot*, it finds pictures of a number of different vegetables.
 
 ## Quantitative Evaluation
 Performing a quantitative evaluation of such a search algorithm seems tricky. One approach could be collecting a test dataset from the web with pairs of images and text, and trying to see if the encoded images are found by querying their exact associated text.

@@ -29,7 +29,7 @@ bash run_app.bash
 ```
 **NB** This bash script abstracts two commands that would continuously run in separate terminal windows. If your python environment is located at a different location than the one in this bash script, please change it so it runs as expected.
 
-Alternatively, run these 2 commands in 2 terminal windows:
+Alternatively, run these 2 commands in 2 terminal windows from the directory of the repo:
 ```bash
 docker run -p 6333:6333 -p 6334:6334 -v $(pwd)/qdrant_storage:/qdrant/storage:z qdrant/qdrant
 ```
@@ -44,3 +44,5 @@ python encode_images.py
 ```
 
 After the script finishes running, you will be able to visit the [search GUI](http://localhost:8501/) and query the database! 
+
+![Screenshot](./readme_images/screenshot_app.png)
