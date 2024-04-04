@@ -64,7 +64,8 @@ I have had this picture show up for the prompt "circuit". Which I meant as a com
 Performing a quantitative evaluation of such a search algorithm seems tricky. One approach could be collecting a test dataset from the web with pairs of images and text, and trying to see if the encoded images are found by querying their exact associated text.
 The system will definitely run into some of the problems we faced in the qualitative evaluation, but it would provide some numbers for the evaluation metrics.
 
-Selecting an evaluation metric is difficult since this is not really a classification problem. Trying to formulate an evaluation method to fit a binary classification metric, i.e. correct vs incorrect retrievals, might lose some of the nuance needed.
+Selecting an evaluation metric is difficult since this is not really a classification problem. Trying to formulate an evaluation method to fit a binary classification metric, i.e. correct vs incorrect retrievals, might lose some of the nuance needed. My gut feeling is that there are better evaluation metrics than accuracy and f1 score for this particular task.
+But for the purposes of this evaluation I will come up with an annotation approach that tries to fit retrievals into either correct/ incorrect bins.
 
 ### Annotation
 **Without** additional data, I'd use a subsection of this dataset, and formulate some queries, while specifically labeling all the pictures that ought to show up in the results.
