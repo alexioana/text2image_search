@@ -1,0 +1,7 @@
+pandas
+qdrant-client
+sentence-transformers
+streamlit
+pillow
+tqdm
+numpy
